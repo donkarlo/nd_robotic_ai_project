@@ -1,12 +1,12 @@
 [project.scripts]
-robotix = "nd_robotic.__main__:main"
+robotix = "nd_robotic_ai.__main__:main"
 
 [build-system]
 requires = ["setuptools>=64", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "nd_robotic"
+name = "nd_robotic_ai"
 version = "1.0.0"
 dependencies = [
     "ruamel.yaml>=0.17.40,<0.18",
@@ -14,7 +14,7 @@ dependencies = [
     "ruamel.yaml.clib>=0.2.7; python_version<'3.13' and platform_python_implementation=='CPython'",
 ]
 
-# for development world: pip install -e .[dev]
+# for development environment: pip install -e .[dev]
 [project.optional-dependencies]
 dev = [
     "mypy>=1.10",
@@ -37,7 +37,7 @@ namespace_packages = true
 explicit_package_bases = true
 
 # only check these
-files = ["nd_robotic", "tests"]
+files = ["nd_robotic_ai", "tests"]
 
 # exclude pytest conftest files
 exclude = '(^|/)conftest\.py$'

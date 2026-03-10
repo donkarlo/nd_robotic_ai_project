@@ -1,1 +1,0 @@
-"""it is not really  a sensor but it can be imagined so to be fused with other_kind sensors for robots that dont follow orders sometimes such as a quad avoids crashing a wall eventhough the human controller pushs it toward teh wall"""
