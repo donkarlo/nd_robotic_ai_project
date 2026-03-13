@@ -12,9 +12,9 @@ from nd_robotic_ai.robot.composition.kind.mind.meta_cognition.cognition.process.
 class Scan(Message):
     def __init__(self, fields:List[Field]):
         super().__init__(fields)
-        if self.get_field_value_by_name("ranges") is None or self.get_field_value_by_name("time") is None:
+        if self.get_field_value_by_name("ranges") is None or self.get_field_value_by_name("time_based") is None:
             raise ValueError("ranges must be between field.__name s")
-        self._time = self.get_field_value_by_name("time")
+        self._time = self.get_field_value_by_name("time_based")
 
     @classmethod
     def init_from_dic(cls, dic: Dic) -> "Scan":
@@ -22,9 +22,9 @@ class Scan(Message):
 
         fields = []
 
-        #time
+        #time_based
         time = TimeStamp.init_from_dic(dic).get_time()
-        field = Field("time", time)
+        field = Field("time_based", time)
         fields.append(field)
 
         ##

@@ -2,18 +2,18 @@ from __future__ import annotations
 
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, Optional, Set, Tuple
+from typing import Dict, Optional, Set
 
 from PySide6.QtCore import QTimer
 from PySide6.QtWidgets import QApplication
 
-from nd_robotic_ai.robot.action.kind.core.kinds.duration_parser import DurationParser
-from nd_robotic_ai.robot.action.kind.core.kinds.repository import Repository
-from nd_robotic_ai.robot.action.kind.core.kinds.time_formatter import TimeFormatter
-from nd_robotic_ai.robot.action.kind.core.kinds.yaml_kinds_loader import YamlKindsLoader
+from nd_robotic_ai.robot.action.kinds.repository import Repository
+from nd_robotic_ai.robot.action.kinds.core.yaml_kinds_loader import YamlKindsLoader
+from nd_robotic_ai.robot.action.kinds.time_based.duration_parser import DurationParser
+from nd_robotic_ai.robot.action.kinds.time_based.formatter import Formatter
 from nd_robotic_ai.robot.action.plan.reminder.communication.interface.main_window import MainWindow, UiPlanSnapshot
 from nd_robotic_ai.robot.action.plan.reminder.communication.interface.speech_synthesizer import SpeechSynthesizer
-from nd_robotic_ai.robot.action.plan.reminder.schedule.by_date_time_loader import ByDateTimeLoader, ScheduledItem
+from nd_robotic_ai.robot.action.plan.reminder.schedule.by_date_time_loader import ByDateTimeLoader
 from nd_robotic_ai.robot.action.plan.reminder.schedule.reminder_offset_parser import ReminderOffsetParser
 
 
@@ -32,7 +32,7 @@ class Reminder:
         self._reminder_offset_parser = ReminderOffsetParser()
 
         self._speech = SpeechSynthesizer()
-        self._time_formatter = TimeFormatter()
+        self._time_formatter = Formatter()
 
         self._app = QApplication.instance()
         if self._app is None:

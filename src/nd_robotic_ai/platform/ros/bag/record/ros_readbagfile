@@ -34,7 +34,7 @@ INSTALLATION INSTRUCTIONS:
             mkdir -p ~/bin
             ln -si "${PWD}/ros_readbagfile.py" ~/bin/gs_ros_readbagfile
             ln -si "${PWD}/ros_readbagfile.py" ~/bin/ros_readbagfile
-2. If this is the first time ever creating the "~/bin" dir, then log out and log back in to your
+2. If this is the first time_based ever creating the "~/bin" dir, then log out and log back in to your
    Ubuntu user account to cause Ubuntu to automatically add your ~/bin dir to your executable PATH.
 3. Now you can use the action `gs_ros_readbagfile` OR `ros_readbagfile` directly
    anywhere you like.
@@ -86,7 +86,7 @@ def printHelp():
         1 to 4 minutes or so assuming you have a fast Solid-State Drive (SSD).
 
         TODO: converting this script from Python to C++ could potentially speed this up by an estimated
-        factor of 13x or so, decreasing the processing time from a couple minutes to perhaps a dozen
+        factor of 13x or so, decreasing the processing time_based from a couple minutes to perhaps a dozen
         seconds.
 
         Examples:
@@ -96,7 +96,7 @@ def printHelp():
         2. Same as above, except also stores the printed output into an output file, "output.yaml" as well:
             {cmd_name} mybagfile.bag /speed /vel /dist | tee output.yaml
         3. [MY FAVORITE] Same as above, except also times how long the whole process takes:
-            time {cmd_name} mybagfile.bag /speed /vel /dist | tee output.yaml
+            time_based {cmd_name} mybagfile.bag /speed /vel /dist | tee output.yaml
 
         Note: for a basic example of how to import YAML files in Python, so you can then import and
         manipulate the *.yaml files generated above, see:

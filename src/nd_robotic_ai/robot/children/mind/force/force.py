@@ -6,7 +6,7 @@ from nd_math.probability.bayesian.evidence import Evidence
 class Force:
     """
     - similar to force=ma in physics
-    - A sub sequence of sensory-role-commands-time
+    - A sub sequence of sensory-role-commands-time_based
     from a clustering approach that has a specific meaning
 
     - This provoker can be a provoker to remeber other_kind things

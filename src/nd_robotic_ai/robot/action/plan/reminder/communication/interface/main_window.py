@@ -21,15 +21,15 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from nd_robotic_ai.robot.action.kind.core.kinds.repository import Repository
-from nd_robotic_ai.robot.action.kind.core.kinds.time_formatter import TimeFormatter
+from nd_robotic_ai.robot.action.kinds.repository import Repository
+from nd_robotic_ai.robot.action.kinds.time_based.formatter import Formatter
 from nd_robotic_ai.robot.action.plan.reminder.communication.interface.to_plan_tree_builder import ToPlanTreeBuilder
 from nd_robotic_ai.robot.action.plan.reminder.communication.interface.ui_plan_snapshot import UiPlanSnapshot
 from nd_robotic_ai.robot.action.plan.reminder.schedule.by_date_time_loader import ScheduledItem
 
 
 class MainWindow(QMainWindow):
-    def __init__(self, repository: Repository, time_formatter: TimeFormatter, yaml_action_kinds_file_path: Optional[str], yaml_plan_by_date_time_file_path: Optional[str], yaml_to_plan_file_path: Optional[str]) -> None:
+    def __init__(self, repository: Repository, time_formatter: Formatter, yaml_action_kinds_file_path: Optional[str], yaml_plan_by_date_time_file_path: Optional[str], yaml_to_plan_file_path: Optional[str]) -> None:
         super().__init__()
 
         self._repository = repository
@@ -47,8 +47,8 @@ class MainWindow(QMainWindow):
 
         root_layout = QHBoxLayout(self._root)
 
-        # Left: By date/time
-        left_box = QGroupBox("By date & time")
+        # Left: By date/time_based
+        left_box = QGroupBox("By date & time_based")
         left_layout = QVBoxLayout(left_box)
 
         left_controls = QHBoxLayout()

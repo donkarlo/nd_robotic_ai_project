@@ -5,7 +5,7 @@ from nd_robotic_ai.robot.children.mind.mind import Mind
 from nd_robotic_ai.robot.goal.composite.component import Component as ComponentGoal
 from nd_robotic_ai.robot.goal.composite.composite import Composite as CompositeGoal
 from nd_utility.os.file_system.directory.directory import Directory
-# from nd_robotic_ai.robot.children.children.mind.cognition.process.children.thinking.decision_making.planning.planning import \
+# from nd_robotic_ai.robot.parts.parts.mind.object_level.process.parts.thinking.decision_making.planning.planning import \
 #     Planning
 
 from nd_robotic_ai.robot.composition.composite import Composite as RobotCompositeComponent
@@ -41,7 +41,7 @@ class Robot(RobotCompositeComponent):
 
     def attach_goal(self, parent_goal: CompositeGoal, goal: ComponentGoal) -> None:
         """
-        We can just attach goals and not actions. Planning in mind>process>thinking>decision making  makes a children action
+        We can just attach goals and not actions. Planning in mind>process>thinking>decision making  makes a parts action
         Args:
             parent_goal:
             goal:

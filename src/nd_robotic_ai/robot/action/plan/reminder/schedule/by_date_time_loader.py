@@ -30,7 +30,7 @@ class ByDateTimeLoader:
         "reminder",
         "reminders",
         "detail",
-        "children",
+        "parts",
         "kinds",
     }
 
@@ -141,7 +141,7 @@ class ByDateTimeLoader:
         kind = str(entry.get("kinds", "")).strip()
 
         children_titles: List[str] = []
-        children_raw = entry.get("children", [])
+        children_raw = entry.get("parts", [])
         if isinstance(children_raw, list):
             for child in children_raw:
                 if isinstance(child, dict):

@@ -6,7 +6,7 @@ from nd_utility.oop.design_pattern.structural.composition.composite import Compo
 
 class Composite(ActionComponent, BaseComposite):
     """
-    - is a flat set of actions in children tree
+    - is a flat set of actions in parts tree
     Organ is a set of actions to be taken to achieve a initial_mission
     - This class is created beacause in a inner_experiment we might have two different plans that can acomplish the same initial_mission
     - https://en.wikipedia.org/wiki/Goal_setting

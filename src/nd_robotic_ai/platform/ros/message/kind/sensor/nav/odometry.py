@@ -23,16 +23,16 @@ class Odometry(Message):
 
     def __init__(self, fields:List):
         super().__init__(fields)
-        self._time = self.get_field_value_by_name("time")
+        self._time = self.get_field_value_by_name("time_based")
 
     @classmethod
     def init_from_dic(cls, dic: Dic) -> "Odometry":
         # fields
         fields:List[Field] = []
 
-        # time
+        # time_based
         time = TimeStamp.init_from_dic(dic).get_time()
-        field = Field("time", time)
+        field = Field("time_based", time)
         fields.append(field)
 
         # pose

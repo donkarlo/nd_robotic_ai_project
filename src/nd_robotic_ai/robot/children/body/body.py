@@ -1,4 +1,4 @@
-from nd_robotic_ai.robot.children.body.nervous_system.nervous_system import NervousSystem
+from nd_robotic_ai.robot.children.body.parts.nervous_system.nervous_system import NervousSystem
 from nd_robotic_ai.robot.composition.composite import Composite as RobotCompositeComponent
 
 

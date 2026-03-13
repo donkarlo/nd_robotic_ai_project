@@ -1,6 +1,6 @@
 from dataclasses import dataclass
-from typing import Dict, List, Optional, Tuple
-from nd_robotic_ai.robot.action.kind.core.kinds.kind import Kind
+from typing import Dict, List, Optional
+from nd_robotic_ai.robot.action.kinds.core.kind import Kind
 from datetime import date
 from nd_robotic_ai.robot.action.plan.reminder.schedule.by_date_time_loader import ScheduledItem
 

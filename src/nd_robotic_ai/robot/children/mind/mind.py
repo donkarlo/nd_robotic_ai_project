@@ -1,4 +1,4 @@
-from nd_robotic_ai.robot.children.mind.meta_cognition.cognition.cognition import Cognition
+from nd_robotic_ai.robot.children.mind.parts.cognition.parts.object_level.cognition import Cognition
 from nd_robotic_ai.robot.composition.composite import Composite as CompositeComponent
 
 
