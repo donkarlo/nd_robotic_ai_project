@@ -1,3 +1,0 @@
-"""
-Auto biographical self
-"""

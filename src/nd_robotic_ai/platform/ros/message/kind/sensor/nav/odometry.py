@@ -7,9 +7,14 @@ from nd_physics.quantity.kind.dynamic.kinematic.pose.orientation.quaternion impo
 from nd_physics.quantity.kind.dynamic.kinematic.twist.angular import Angular
 from nd_physics.quantity.kind.dynamic.kinematic.twist.linear import Linear
 from nd_physics.quantity.kind.dynamic.kinematic.twist.twist import Twist
-from nd_robotic_ai.robot.robot import Timed
-from nd_robotic_ai.robot.robot import GaussianedQuaternionKinematic
-from nd_robotic_ai.robot.composition.kind.mind.meta_cognition.cognition.process.composition.child.memory.composition.trace.trace import Trace
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.composition.trace.decorator.timed import \
+    Timed
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.composition.trace.kinds.gaussianed_quaternion_kinematic.gaussianed_quaternion_kinematic import \
+    GaussianedQuaternionKinematic
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.composition.trace.trace import \
+    Trace
+
+
 from nd_robotic_ai.platform.ros.message.field.field import Field
 from nd_robotic_ai.platform.ros.message.message import Message
 from nd_robotic_ai.platform.ros.message.kind.header.time_stamp import TimeStamp
@@ -91,8 +96,7 @@ class Odometry(Message):
         distributed_twist = Gaussianed(Twist(linear_twist, angular_twist), cov_twist)
 
         # kinematic
-        trace = Trace.init_from_formatted_data_and_kind_and_name(PoseTwistKinematic(distributed_pose, distributed_twist),
-                                                                 GaussianedQuaternionKinematic(), None)
+        trace = Trace.init_from_formatted_data_and_kind_and_name(PoseTwistKinematic(distributed_pose, distributed_twist), GaussianedQuaternionKinematic(), None)
         timed_trace = Timed(trace, self._time)
 
         kind = BasedOnInheritence(timed_trace)

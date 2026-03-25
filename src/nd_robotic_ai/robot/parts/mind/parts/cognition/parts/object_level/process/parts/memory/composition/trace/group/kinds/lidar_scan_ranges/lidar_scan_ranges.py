@@ -1,0 +1,6 @@
+class LidarScanRanges:
+    """
+    """
+    pass
+
+

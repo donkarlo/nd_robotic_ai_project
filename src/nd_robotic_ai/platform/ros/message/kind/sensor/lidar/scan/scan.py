@@ -1,12 +1,15 @@
-from nd_robotic_ai.robot.robot import Timed
-from nd_robotic_ai.robot.robot import LidarScanRanges
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.composition.trace.decorator.timed import Timed as TimedTrace
 from nd_robotic_ai.platform.ros.message.field.field import Field
 from nd_robotic_ai.platform.ros.message.message import Message
 from nd_robotic_ai.platform.ros.message.kind.header.time_stamp import TimeStamp
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.composition.trace.kinds.lidar_scan_ranges.lidar_scan_ranges import \
+    LidarScanRanges
+
+from nd_robotic_ai.robot.parts.body.parts.nervous_system.parts.neuron.kinds.sensory.kinds.lidar.observation import observation as LidarObservation
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.composition.trace.trace import \
+    Trace
 from nd_utility.data.kind.dic.dic import Dic
-from nd_robotic_ai.robot.robot import Observation as LidarObservation
 from typing import List
-from nd_robotic_ai.robot.composition.kind.mind.meta_cognition.cognition.process.composition.child.memory.composition.trace.trace import Trace as Trace
 
 
 class Scan(Message):
@@ -72,5 +75,5 @@ class Scan(Message):
 
     def get_scan_ranges_trace(self)-> Trace:
         trace = Trace.init_from_formatted_data_and_kind_and_name(LidarObservation(self.get_field_value_by_name("ranges")), LidarScanRanges() ,None)
-        timed_trace = Timed(trace, self._time)
+        timed_trace = TimedTrace(trace, self._time)
         return timed_trace

@@ -18,15 +18,15 @@ class LoadedKinds:
 
 
 class YamlKindsLoader:
-    """Loads kinds.yaml.
+    """Loads classification.yaml.
 
     This loader is intentionally permissive because the user maintains the YAML manually.
 
     Supported root formats:
         - dict: {ActionTitle: <children_def>, ...}
-        - list: [{title: ActionTitle, parts: <children_def>}, ...]
+        - list: [{title: ActionTitle, classification: <children_def>}, ...]
 
-    Supported parts formats (per action):
+    Supported classification formats (per action):
         - dict: {ChildTitle: "10min", ...}
         - list of dicts:
             - {title: ChildTitle, duration: "10min"}
@@ -36,7 +36,7 @@ class YamlKindsLoader:
             - "ChildTitle"  (treated as 0 seconds)
 
     Missing durations are treated as 0 seconds.
-    Invalid parts entries are ignored.
+    Invalid classification entries are ignored.
     """
 
     def __init__(self, duration_parser: DurationParser) -> None:
@@ -63,7 +63,7 @@ class YamlKindsLoader:
                 plans.append(self._parse_action(title=str(action_title), children_raw=children_raw))
             return plans
 
-        raise ValueError("kinds.yaml must be a dict or list")
+        raise ValueError("classification.yaml must be a dict or list")
 
     def _parse_list_root(self, data: List[Any]) -> List[Kind]:
         plans: List[Kind] = []
@@ -75,7 +75,7 @@ class YamlKindsLoader:
             if not title:
                 continue
 
-            children_raw = item.get("parts", [])
+            children_raw = item.get("classification", [])
             plans.append(self._parse_action(title=title, children_raw=children_raw))
         return plans
 

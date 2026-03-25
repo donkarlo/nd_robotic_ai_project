@@ -1,11 +1,11 @@
 from abc import ABC
 
-from nd_robotic_ai.robot.children.body.body import Body
-from nd_robotic_ai.robot.children.mind.mind import Mind
+from nd_robotic_ai.robot.parts.body.body import Body
+from nd_robotic_ai.robot.parts.mind.mind import Mind
 from nd_robotic_ai.robot.goal.composite.component import Component as ComponentGoal
 from nd_robotic_ai.robot.goal.composite.composite import Composite as CompositeGoal
 from nd_utility.os.file_system.directory.directory import Directory
-# from nd_robotic_ai.robot.parts.parts.mind.object_level.process.parts.thinking.decision_making.planning.planning import \
+# from nd_robotic_ai.robot.classification.classification.mind.object_level.process.classification.thinking.decision_making.planning.planning import \
 #     Planning
 
 from nd_robotic_ai.robot.composition.composite import Composite as RobotCompositeComponent
@@ -15,7 +15,7 @@ from nd_robotic_ai.robot.composition.composite import Composite as RobotComposit
 class Robot(RobotCompositeComponent):
     """
     A robot is a singletone that is acceptable for comunication therough the structure
-    Each robot is an intersection between mind and body, it relates a Group of ActionPotential Group (NeuralCoding) to a trace society formatted data
+    Each robot is an intersection between mind and body, it relates a Train of ActionPotential Train (NeuralCoding) to a trace society formatted data
     """
 
     def __init__(self):
@@ -41,7 +41,7 @@ class Robot(RobotCompositeComponent):
 
     def attach_goal(self, parent_goal: CompositeGoal, goal: ComponentGoal) -> None:
         """
-        We can just attach goals and not actions. Planning in mind>process>thinking>decision making  makes a parts action
+        We can just attach goals and not actions. Planning in mind>process>thinking>decision making  makes a classification action
         Args:
             parent_goal:
             goal:
@@ -62,3 +62,6 @@ class Robot(RobotCompositeComponent):
         #
         # self._composite_action.run()
         ...
+
+    def add_even_specific_knowledge(self)->None:
+        pass

@@ -149,7 +149,7 @@ class Repository(QObject):
             if self._remaining_seconds > 0:
                 return
 
-        # Move to next parts
+        # Move to next classification
         plan = self._plans_by_title.get(self._active_action_title)
         if plan is None:
             self.stop(announce_finished=True)
