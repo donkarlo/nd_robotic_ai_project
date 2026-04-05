@@ -5,7 +5,7 @@ from nd_utility.data.kind.group.group import Group as UtilityGroup
 
 class Group(SocietyComponent, BaseComposite):
     """
-    The composite here is a society
+    The composition here is a society
     - there is a relationship graph path with length one between childrens of each society
     - classification can be both a single robot and another society
     """

@@ -1,4 +1,4 @@
-# from nd_robotic_ai.robot.classification.uav.classification.multi_copter.quad_copter.classification.body.actuator.rotor.composite import Train as RotorGroup
+# from nd_robotic_ai.robot.classification.uav.classification.multi_copter.quad_copter.classification.body.actuator.rotor.composition import Train as RotorGroup
 from nd_robotic_ai.robot.kinds.uav.uav import Uav
 
 

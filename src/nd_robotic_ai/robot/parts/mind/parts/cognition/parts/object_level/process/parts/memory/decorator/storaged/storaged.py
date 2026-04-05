@@ -13,7 +13,7 @@ class Storaged(Decorator, StorageInterface):
     """
     def __init__(self, inner: MemoryComponent, storage: MultiValuedStorageInterface):
         """
-        The internal_storage in storaged is brain or body part of the mind
+        The internal_storage in storaged is brain or body parts of the mind
         """
         Decorator.__init__(self, inner)
         self._storage = storage

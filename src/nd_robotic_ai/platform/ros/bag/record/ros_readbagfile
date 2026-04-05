@@ -12,7 +12,7 @@
 # https://stackoverflow.com/questions/2429511/why-do-people-write-usr-bin-env-python-on-the-first-line-of-a-python-script
 
 """
-This file is part of eRCaGuy_dotfiles: https://github.com/ElectricRCAircraftGuy/eRCaGuy_dotfiles
+This file is parts of eRCaGuy_dotfiles: https://github.com/ElectricRCAircraftGuy/eRCaGuy_dotfiles
 
 Author: Gabriel Staples
 
@@ -106,7 +106,7 @@ def printHelp():
         For a usage demo, see this ROS tutorial I wrote here: "Reading messages from a bag file":
         http://wiki.ros.org/ROS/Tutorials/reading%20msgs%20from%20a%20bag%20file
 
-        '{cmd_name}' is part of eRCaGuy_dotfiles:
+        '{cmd_name}' is parts of eRCaGuy_dotfiles:
         https://github.com/ElectricRCAircraftGuy/eRCaGuy_dotfiles/blob/master/useful_scripts/ros_readbagfile.py
         """)
 

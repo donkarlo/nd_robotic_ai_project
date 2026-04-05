@@ -3,7 +3,7 @@ from nd_robotic_ai.robot.composition.composite import Composite as RobotComposit
 
 class Cognition(RobotCompositeUnit):
     """
-    -  the processing part of the mind
+    -  the processing parts of the mind
     - Bridge between language and ontology by decision making and acting
     - 
     """

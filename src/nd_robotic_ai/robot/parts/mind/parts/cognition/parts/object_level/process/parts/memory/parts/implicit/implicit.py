@@ -2,9 +2,9 @@ from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.p
     RepetitionPriming
 from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.implicit.skill.skill import \
     Skill
-from nd_robotic_ai.robot.composition.composite import Composite as RobotCompositComponent
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.composition.composite import Composite as MemoryComposite
 
-class Implicit(RobotCompositComponent):
+class Implicit(MemoryComposite):
     """
     - associated with a lack of conscious event_specific_knowledge_forcasting_model_config/awareness of the previously experienced information.
     - skills:
@@ -14,6 +14,6 @@ class Implicit(RobotCompositComponent):
         """
         loading by order that human brain loads
         """
-        RobotCompositComponent.__init__(self)
+        MemoryComposite.__init__(self)
         self.add_child(RepetitionPriming())
         self.add_child(Skill())

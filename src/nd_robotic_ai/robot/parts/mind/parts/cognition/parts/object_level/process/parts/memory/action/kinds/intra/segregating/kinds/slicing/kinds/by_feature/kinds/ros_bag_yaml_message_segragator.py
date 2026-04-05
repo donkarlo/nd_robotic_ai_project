@@ -9,7 +9,7 @@ from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.p
     Component as MemoryComponent
 from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.composition.composite import \
     Composite as MemoryComposite
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.composition.trace.group.group import \
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.composition.leaf.leaf import \
     Group as TraceGroup
 from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.decorator.storaged.storaged import \
     Storaged

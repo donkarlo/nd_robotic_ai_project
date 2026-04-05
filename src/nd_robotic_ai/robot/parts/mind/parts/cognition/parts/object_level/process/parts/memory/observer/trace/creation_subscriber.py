@@ -1,7 +1,9 @@
-from typing import Protocol, runtime_checkable
+from abc import ABC, abstractmethod
 
-from nd_robotic_ai.robot.composition.kind.mind.meta_cognition.cognition.process.composition.child.memory.composition.trace.trace import Trace
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.composition.leaf.leaf import \
+    Trace
 
-@runtime_checkable
-class TraceCreationSubscriber(Protocol):
-    def do_with_created_trace(self, trace: Trace)->None: ...
+
+class CreationSubscriber(ABC):
+    @abstractmethod
+    def handle_created_trace(self, trace: Trace) -> None: ...
