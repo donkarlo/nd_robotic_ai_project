@@ -42,11 +42,11 @@ class RosBagYamlMessageSegragating(FeatureSlicer, TraceAddValueSubscriber, Group
         Segregating.__init__(self, source_memory_component)
 
         if not BaseDecorator.has_decorator(self._source_memory_component, Storaged):
-            raise TypeError("Working component's trace action_potential_group must be decorated with Storage")
+            raise TypeError("ShortTerm component's trace action_potential_group must be decorated with Storage")
         if not isinstance(self._source_memory_component.get_storage(),
                           UniKindedMultiValuedYamlFile):
             raise TypeError(
-                "Working component's trace action_potential_group internal_storage must be a UniKindedMultiValuedYamlFile")
+                "ShortTerm component's trace action_potential_group internal_storage must be a UniKindedMultiValuedYamlFile")
 
         # umvyf stand for UniKindedMultiValuedYamlFile internal_storage
         self._current_uni_formted_multi_value_storage: UniKindedMultiValuedYamlFile = self._source_memory_component.get_storage()

@@ -14,7 +14,7 @@ class Remembering:
     """
     def __init__(self, order):
         """
-        It is not necessary to set the action_potential_group os_file as it is already introduced in Memorizing class and Remebering and Memorizing class are bounded in Working class
+        It is not necessary to set the action_potential_group os_file as it is already introduced in Memorizing class and Remebering and Memorizing class are bounded in ShortTerm class
         """
         self._levels = None
 

@@ -1,10 +1,10 @@
 from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.composition.composite import \
     Composite as MemoryComposite
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.long_term.parts.semantic.parts.action.action import \
+from nd_robotic_ai.robot.parts.action.action import \
     Action as ActionComposite
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.long_term.parts.semantic.parts.goal.goal import \
+from nd_robotic_ai.robot.parts.goal.goal import \
     Goal as GoalComposite
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.long_term.parts.semantic.parts.plan.plan import \
+from nd_robotic_ai.robot.parts.goal.plan.plan import \
     Plan
 
 
