@@ -9,6 +9,7 @@ from nd_robotic_ai.robot.parts.goal.composition.component import Component as Go
 
 class Action(ActionComposite, ABC):
     """
+    - Action is whatever consumes energy
     - This class represents available actions, not running actions
     - Action is whatever consumes resorces such as energy or health(for example spare classification)
     This action can become so granular that to a action to change voltage in a rotor so in ROS we replaced Action for both Plan and COmmand and mission

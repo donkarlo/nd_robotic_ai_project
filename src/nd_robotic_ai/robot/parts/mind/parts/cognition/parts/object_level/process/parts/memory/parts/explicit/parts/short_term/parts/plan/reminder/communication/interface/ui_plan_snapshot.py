@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from datetime import date
 from typing import Any, Dict, List, Optional
 
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.working.parts.plan.reminder.schedule.by_date_time_loader import ScheduledItem
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.short_term.parts.plan.reminder.schedule.by_date_time_loader import ScheduledItem
 
 
 @dataclass(frozen=True)

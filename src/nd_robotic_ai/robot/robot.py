@@ -12,7 +12,7 @@ from nd_utility.os.file_system.directory.directory import Directory
 class Robot(RobotComposite):
     """
     A robot is a singletone that is acceptable for comunication therough the structure
-    Each robot is an intersection between mind and body, it relates a Train of ActionPotential Train (NeuralCoding) to a trace society formatted data
+    Each robot is an intersection between mind and body, it relates a Train of ActionPotential Train (NeuralCoding) to a trace_formation society formatted data
     """
 
     def __init__(self):
@@ -29,7 +29,7 @@ class Robot(RobotComposite):
 
 
 
-    def run(self) -> None:
+    def enlive(self) -> None:
         # All goals must be attached to this one so that teh robot decides the priority between them
         working_memory_plan = self.get_child(Working).get_child(WorkingMemoryPlan)
-        working_memory_plan.run()
+        working_memory_plan.enlive()

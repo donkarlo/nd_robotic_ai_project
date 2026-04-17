@@ -6,7 +6,7 @@ from nd_robotic_ai.robot.parts.body.parts.nervous_system.neural_coding.neural_co
 class Sensory(RobotComposite):
     def __init__(self):
         """
-        Sensory is sensory nervous system, not  a single neuron something that converts #stimuli to a #trace
+        Sensory is sensory nervous system, not  a single neuron something that converts #stimuli to a #trace_formation
         #sensory_nervous_system
         """
         pass

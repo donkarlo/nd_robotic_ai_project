@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class Integrator(ABC):
     """
-    In neuroscience at perceptual level which is a level higher than physiological layer integration is used to combine two components of memory (for example two trace groups )
+    In neuroscience at perceptual level which is a level higher than physiological layer integration is used to combine two components of memory (for example two trace_formation groups )
     """
     def __init__(self, source_component:Component):
         self._source_component = source_component

@@ -31,10 +31,10 @@ from PySide6.QtWidgets import (
 
 from nd_robotic_ai.robot.parts.action.kinds.repository import Repository
 from nd_robotic_ai.robot.parts.action.kinds.time_based.formatter import Formatter
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.working.parts.plan.reminder.communication.interface.refresh_button import RefreshButton
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.working.parts.plan.reminder.communication.interface.to_plan_tree_builder import ToPlanTreeBuilder
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.working.parts.plan.reminder.communication.interface.ui_plan_snapshot import UiPlanSnapshot
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.working.parts.plan.reminder.schedule.by_date_time_loader import ScheduledItem
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.short_term.parts.plan.reminder.communication.interface.refresh_button import RefreshButton
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.short_term.parts.plan.reminder.communication.interface.to_plan_tree_builder import ToPlanTreeBuilder
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.short_term.parts.plan.reminder.communication.interface.ui_plan_snapshot import UiPlanSnapshot
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.short_term.parts.plan.reminder.schedule.by_date_time_loader import ScheduledItem
 
 ITEM_TYPE_ROLE = Qt.UserRole + 1
 DAY_ROLE = Qt.UserRole + 2

@@ -10,7 +10,7 @@ from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.p
 
 class Segregating(Interface, ABC):
     """
-    Neurological term for seprating different senses that we use here for a trace action_potential_group to seprate it should cover
+    Neurological term for seprating different senses that we use here for a trace_formation action_potential_group to seprate it should cover
     - Segregating is an effort to reduce suprise
     - separating modalities
     - clustering

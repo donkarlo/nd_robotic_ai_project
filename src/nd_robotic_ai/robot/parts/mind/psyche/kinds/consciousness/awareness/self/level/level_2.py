@@ -28,7 +28,7 @@ class Level2(Level):
     def test_crossmodal_self_mapping(self) -> UnitInterval:
         """
         Associates self-unique signatures across modality_group (voice/propeller-harmonics,
-        RF/odometry trace, odor tag), discriminating own signals from conspecifics.
+        RF/odometry trace_formation, odor tag), discriminating own signals from conspecifics.
         """
         return 0.0
 

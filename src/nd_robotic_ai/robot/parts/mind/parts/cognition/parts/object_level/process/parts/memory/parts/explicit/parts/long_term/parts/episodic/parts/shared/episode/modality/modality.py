@@ -1,4 +1,4 @@
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.composition.leaf.leaf import \
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.perception.trace.group.group import \
     Group as TraceGroup
 from nd_utility.data.kind.dic.dic import Dic
 

@@ -42,11 +42,11 @@ class RosBagYamlMessageSegragating(FeatureSlicer, TraceAddValueSubscriber, Group
         Segregating.__init__(self, source_memory_component)
 
         if not BaseDecorator.has_decorator(self._source_memory_component, Storaged):
-            raise TypeError("ShortTerm component's trace action_potential_group must be decorated with Storage")
+            raise TypeError("ShortTerm component's trace_formation action_potential_group must be decorated with Storage")
         if not isinstance(self._source_memory_component.get_storage(),
                           UniKindedMultiValuedYamlFile):
             raise TypeError(
-                "ShortTerm component's trace action_potential_group internal_storage must be a UniKindedMultiValuedYamlFile")
+                "ShortTerm component's trace_formation action_potential_group internal_storage must be a UniKindedMultiValuedYamlFile")
 
         # umvyf stand for UniKindedMultiValuedYamlFile internal_storage
         self._current_uni_formted_multi_value_storage: UniKindedMultiValuedYamlFile = self._source_memory_component.get_storage()
@@ -74,26 +74,26 @@ class RosBagYamlMessageSegragating(FeatureSlicer, TraceAddValueSubscriber, Group
             if value.has_nested_keys(["header", "frame_id"]):
                 # if it is a ROS odom message
                 if value.has_nested_keys(["pose"]):
-                    # then its is a ROS odometry trace
+                    # then its is a ROS odometry trace_formation
                     new_trace = RosOdometryMessage.init_from_dic(value).get_distributed_kinematic_trace()
                 elif value.has_nested_keys(["ranges"]):
-                    # then it is a ROS scan trace
+                    # then it is a ROS scan trace_formation
                     new_trace = RosScanMessage.init_from_dic(value).get_scan_ranges_trace()
 
-                # note that trace classification title is the same as trace action_potential_group classification title in this case
+                # note that trace_formation classification title is the same as trace_formation action_potential_group classification title in this case
 
-                # setting trace groupe title to be used as the file title too
+                # setting trace_formation groupe title to be used as the file title too
                 slice_name = UtilitySlice(self._slice).get_name()
                 trace_group_name = new_trace.__class__.name + slice_name
 
-                # init the trace action_potential_group now
+                # init the trace_formation action_potential_group now
                 new_trace_group = TraceGroup()
 
                 # adding it to the dictionary
                 self._trace_groups_dic.add_key_value(new_trace_group.get_kind().get_name(), new_trace_group, True)
 
             for trace_group_kind_name, trace_group in self._trace_groups_dic.get_keys_values():
-                # we use starts with here because trace action_potential_group classification title is has a slice string in the end
+                # we use starts with here because trace_formation action_potential_group classification title is has a slice string in the end
                 if trace_group_kind_name == new_trace.get_kind().get_name():
                     trace_group.add_member(new_trace)
 

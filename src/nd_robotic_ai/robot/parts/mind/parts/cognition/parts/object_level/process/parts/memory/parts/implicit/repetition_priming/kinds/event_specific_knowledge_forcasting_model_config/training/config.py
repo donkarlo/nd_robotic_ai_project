@@ -11,7 +11,7 @@ class Config(BaseTrainingConfig):
             "input_sequence_size": 100,
             "output_sequence_size": 100,
             "sequence_overlap_size": 10,
-            "epochs": 10,
+            "epochs": 5,
             "batch_size": 4,
             "learning_rate": 1e-3,
             "shuffle": True

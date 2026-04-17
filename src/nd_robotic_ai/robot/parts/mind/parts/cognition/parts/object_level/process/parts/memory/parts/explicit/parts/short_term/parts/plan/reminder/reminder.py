@@ -11,11 +11,16 @@ from nd_robotic_ai.robot.parts.action.kinds.core.yaml_kinds_loader import YamlKi
 from nd_robotic_ai.robot.parts.action.kinds.repository import Repository
 from nd_robotic_ai.robot.parts.action.kinds.time_based.duration_parser import DurationParser
 from nd_robotic_ai.robot.parts.action.kinds.time_based.formatter import Formatter
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.working.parts.plan.reminder.communication.interface.main_window import MainWindow
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.working.parts.plan.reminder.communication.interface.speech_synthesizer import SpeechSynthesizer
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.working.parts.plan.reminder.communication.interface.ui_plan_snapshot import UiPlanSnapshot
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.working.parts.plan.reminder.schedule.by_date_time_loader import ByDateTimeLoader
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.working.parts.plan.reminder.schedule.reminder_offset_parser import ReminderOffsetParser
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.short_term.parts.plan.reminder.communication.interface.main_window import \
+    MainWindow
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.short_term.parts.plan.reminder.communication.interface.speech_synthesizer import \
+    SpeechSynthesizer
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.short_term.parts.plan.reminder.communication.interface.ui_plan_snapshot import \
+    UiPlanSnapshot
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.short_term.parts.plan.reminder.schedule.by_date_time_loader import \
+    ByDateTimeLoader
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.short_term.parts.plan.reminder.schedule.reminder_offset_parser import \
+    ReminderOffsetParser
 
 
 class Reminder:

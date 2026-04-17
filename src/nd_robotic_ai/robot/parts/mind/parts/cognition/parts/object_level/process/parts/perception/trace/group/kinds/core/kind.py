@@ -17,7 +17,7 @@ class Kind(ABC):
     @classmethod
     def init_from_single_trace_kind(cls, single_trace_kind: SingleTraceKind):
         """
-        Used when all members of the Finite are of the same trace classification
+        Used when all members of the Finite are of the same trace_formation classification
         Args:
             single_trace_kind:
 
@@ -33,7 +33,7 @@ class Kind(ABC):
 
     def set_name(self, name:str)->None:
         """
-        Can be used buy others to vote for their title or currently I am using it to title it according to trace classification plus slc
+        Can be used buy others to vote for their title or currently I am using it to title it according to trace_formation classification plus slc
         Args:
             name:
 

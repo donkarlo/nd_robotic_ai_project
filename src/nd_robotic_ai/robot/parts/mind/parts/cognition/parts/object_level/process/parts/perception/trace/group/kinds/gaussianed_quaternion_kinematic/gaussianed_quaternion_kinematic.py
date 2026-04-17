@@ -66,7 +66,7 @@ class  GaussianedQuaternionKinematic(TraceGroup, TraceGroupKind):
         position_trace_group_storage.save()
 
 
-        # Build the memory component for time_based position trace action_potential_group
+        # Build the memory component for time_based position trace_formation action_potential_group
         #position_sequence_trace_group = StoragedTraceGroup.init_by_traces_and_kind_and_name(time_position_seq, TimePositions,                                                                                    TimePositions.__name__)
         # position_sequence_storaged_trace_group = Storage(position_sequence_trace_group, position_trace_group_storage)
         # stroraged_trace_group = Storage(StoragedTraceGroup.init_by_traces_and_kind_and_name(time_position_sequence, None, None))

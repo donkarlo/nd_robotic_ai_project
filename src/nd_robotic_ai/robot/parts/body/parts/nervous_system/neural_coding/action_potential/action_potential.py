@@ -13,6 +13,5 @@ class ActionPotential:
     - action_potential is formed of power (Voltage) and duration (Duration)
     """
 
-    def __init__(self, united_time_interval: Interval, time_unit: Unit, voltage_interval: Interval, voltage_unit: Unit):
-        self._united_time_interval = united_time_interval
-        self.action_potential = united_voltage_interval
+    def __init__(self):
+        ...
