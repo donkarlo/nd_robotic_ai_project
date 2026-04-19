@@ -7,7 +7,7 @@ from nd_utility.data.kind.group.decorator.unikinded import Unikinded
 
 
 class Neuron(RobotLeaf, ActionPotentialPublisher):
-    def fire_action_potential(self, action_potential:ActionPotential):
+    def notify_action_potential_subscribers(self, action_potential:ActionPotential):
         pass
 
     def fire_action_potential_train(self)->Unikinded[ActionPotential]:

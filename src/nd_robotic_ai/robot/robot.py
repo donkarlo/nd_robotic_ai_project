@@ -1,13 +1,16 @@
 from nd_robotic_ai.robot.composition.composite import Composite as RobotComposite
 from nd_robotic_ai.robot.parts.body.body import Body
+from nd_robotic_ai.robot.parts.body.parts.nervous_system.parts.neuron.kinds.sensory.parts.receptor.receptor import \
+    Receptor
 from nd_robotic_ai.robot.parts.mind.mind import Mind
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.working.parts.plan.plan import \
-    Plan as WorkingMemoryPlan
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.working.working import \
-    Working
+from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.perception.perception import \
+    Perception
 from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.thinking.parts.planning.planning import \
     Planning
-from nd_utility.os.file_system.directory.directory import Directory
+from nd_robotic_ai.robot.parts.mind.state.kind.dead.dead import Dead
+from nd_robotic_ai.robot.parts.mind.state.kind.idle.idle import Idle
+from nd_robotic_ai.robot.parts.stimulus.observer.kind.mind_state_change.mind_state_change import MindStateChange
+
 
 class Robot(RobotComposite):
     """
@@ -23,13 +26,20 @@ class Robot(RobotComposite):
         """
         RobotComposite.__init__(self)
 
-
         self.add_child(Body())
         self.add_child(Mind())
 
-
-
     def enlive(self) -> None:
         # All goals must be attached to this one so that teh robot decides the priority between them
-        working_memory_plan = self.get_child(Working).get_child(WorkingMemoryPlan)
-        working_memory_plan.enlive()
+        stimulus = MindStateChange(Dead(), Idle())
+
+        mind_state_receptor = self.find_component_by_name(Receptor)
+
+        mind_state_receptor.
+
+        perception = self.find_component_by_name(Perception)
+
+        perception.notify_trace_formation_subscribers()
+
+        planning = self.find_component_by_name(Planning)
+        planning.run()

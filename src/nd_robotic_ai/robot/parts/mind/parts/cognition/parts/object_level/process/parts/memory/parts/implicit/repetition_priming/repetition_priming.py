@@ -4,7 +4,7 @@ from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.p
 
 class RepetitionPriming(MemoryComposite):
     """
-    facilating perception based on previous inner_experiment
+    facilating percepting based on previous inner_experiment
     """
 
     def __init__(self):

@@ -1,4 +1,4 @@
-from nd_robotic_ai.robot.parts.body.parts.nervous_system.neural_coding.neural_coding.population_coding.population_code import \
+from nd_robotic_ai.robot.parts.body.parts.nervous_system.neural_coding.neural_coding.kind.population_coding.population_code import \
     PopulationCode
 from nd_robotic_ai.robot.parts.body.parts.nervous_system.stimulus.stimulus import Stimulus
 

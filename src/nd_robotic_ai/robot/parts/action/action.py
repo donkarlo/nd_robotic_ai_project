@@ -2,9 +2,7 @@ from abc import abstractmethod, ABC
 
 from nd_robotic_ai.robot.parts.action.composition.composite import \
     Composite as ActionComposite
-from nd_robotic_ai.robot.parts.action.feedback.feedback import \
-    Feedback
-from nd_robotic_ai.robot.parts.goal.composition.component import Component as GoalComponent
+from nd_robotic_ai.robot.state.state import State
 
 
 class Action(ActionComposite, ABC):
@@ -24,12 +22,11 @@ class Action(ActionComposite, ABC):
             - remember
     """
 
-    def __init__(self, goal: GoalComponent):
+    def __init__(self):
         ActionComposite.__init__(self)
-        self._goal = goal
 
     @abstractmethod
-    def run(self) -> Feedback:
+    def run(self) -> State:
         """
         This run will be propegated to top or mabe bottom actions
         Returns:

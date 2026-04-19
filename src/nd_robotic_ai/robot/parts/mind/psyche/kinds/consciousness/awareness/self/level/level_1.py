@@ -28,7 +28,7 @@ class Level1(Level):
 
     def test_agency_detection(self) -> UnitInterval:
         """
-        Quantifies 'perception of agency' (e.g., intentional binding / reduced delay estimates)
+        Quantifies 'percepting of agency' (e.g., intentional binding / reduced delay estimates)
         by comparing owned vs. externally injected actuation patterns.
         """
         return 0.0

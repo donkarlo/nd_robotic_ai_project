@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 from nd_math.probability.bayesian.observation import Observation
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.perception.observer.kind.trace_formation.subscriber import \
+from nd_robotic_ai.robot.parts.stimulus.observer.kind.trace_formation.subscriber import \
     Subscriber as PerceptionSubscriber
 
 
@@ -11,9 +11,9 @@ class Publisher(ABC):
         ...
 
     @abstractmethod
-    def attach_subcriber(self, subscriber: PerceptionSubscriber) -> None:
+    def attach_trace_formation_subcriber(self, trace_formation_subscriber: PerceptionSubscriber) -> None:
         ...
 
     @abstractmethod
-    def notify_subscribers(self) -> None:
+    def notify_trace_formation_subscribers(self) -> None:
         ...

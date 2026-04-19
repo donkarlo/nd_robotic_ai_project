@@ -15,7 +15,7 @@ from nd_robotic_ai.robot.composition.composite import Composite as RobotComposit
 class Process(RobotCompositeComponent):
     def __init__(self):
         """
-        memory, perception, attention: Attention, thinking: Thinking, learning: Learning
+        memory, percepting, attention: Attention, thinking: Thinking, learning: Learning
         """
         RobotCompositeComponent.__init__(self)
         self.add_children([Memory(), Learning(), Thinking(), Perception(), Attention()])

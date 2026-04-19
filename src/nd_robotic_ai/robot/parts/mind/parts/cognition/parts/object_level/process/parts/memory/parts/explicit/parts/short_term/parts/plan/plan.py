@@ -10,13 +10,11 @@ from nd_robotic_ai.robot.parts.goal.composition.composite import \
     Composite as GoalComposite
 from nd_robotic_ai.robot.parts.goal.plan.plan import \
     Plan as SemanticPlan
-from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.working.parts.plan.observer.publisher import \
-    Publisher
 from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.thinking.parts.planning.planning import \
     Planning
 
 
-class Plan(MemoryComposite, Publisher):
+class Plan(MemoryComposite):
     """
     Maybe plan must be changed according to action feedback
     """

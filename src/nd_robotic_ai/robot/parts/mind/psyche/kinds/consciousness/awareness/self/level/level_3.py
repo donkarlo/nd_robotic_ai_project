@@ -14,7 +14,7 @@ class Level3(Level):
 
     def test_perspective_taking(self) -> UnitInterval:
         """
-        Distinguishes what another agent can/cannot perception (line-of-sight, occlusion),
+        Distinguishes what another agent can/cannot percepting (line-of-sight, occlusion),
         adapting str_path/communicating accordingly.
         """
         return 0.0
