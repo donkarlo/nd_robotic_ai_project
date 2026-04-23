@@ -57,26 +57,7 @@ class Perception(RobotCompositeComponent, ActionPotentialSubcriber, MindStateCha
         for subscriber in self._mind_state_change_subscribers:
             subscriber.notify_mind_state_change(mind_state_change_subscriber)
 
-    def _sort_action_potential(self, action_potential: ActionPotential):
-        """
-        - see sorting action potentials
-        Fine out to which branch in self._action_potential_composite   the new action potential belongs acoording to its shape
-        Args:
-            action_potential:
 
-        Returns:
-
-        """
-        generating_neural_coding_is_necessary = False
-        if generating_neural_coding_is_necessary:
-            self._generate_neural_coding()
-
-    def _generate_neural_coding(self):
-        """
-        Returns:
-
-        """
-        pass
 
     @override_from(Action, False, False)
     def run(self) -> None:

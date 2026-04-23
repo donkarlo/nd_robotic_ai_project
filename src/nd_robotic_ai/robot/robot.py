@@ -35,7 +35,7 @@ class Robot(RobotComposite):
 
         mind_state_receptor = self.find_component_by_name(Receptor)
 
-        mind_state_receptor.
+        mind_state_receptor.receive_stimulus(stimulus)
 
         perception = self.find_component_by_name(Perception)
 
