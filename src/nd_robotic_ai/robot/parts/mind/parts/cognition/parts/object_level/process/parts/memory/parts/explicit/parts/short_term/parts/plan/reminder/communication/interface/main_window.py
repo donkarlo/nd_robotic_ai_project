@@ -381,7 +381,7 @@ class MainWindow(QMainWindow):
         controls_row.addWidget(self._refresh_button)
         middle_layout.addLayout(controls_row)
 
-        self._status_label = QLabel("Idle")
+        self._status_label = QLabel("MindWandering")
         middle_layout.addWidget(self._status_label)
 
         self._kinds_tree = QTreeWidget()
@@ -979,7 +979,7 @@ class MainWindow(QMainWindow):
         current_status = self._status_label.text()
         if active_state is None:
             if current_status.startswith("Active:"):
-                self._status_label.setText("Idle")
+                self._status_label.setText("MindWandering")
         else:
             self._status_label.setText(f"Active: {active_state.action_title}")
 

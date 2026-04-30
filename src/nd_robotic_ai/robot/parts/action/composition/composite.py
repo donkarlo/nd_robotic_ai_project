@@ -11,7 +11,7 @@ class Composite(MemoryComposite):
         MemoryComposite.__init__(self)
 
     def run(self) -> None:
-        self._feedback = self._action.enlive()
+        self._feedback = self._action.enliven()
 
         for child in MemoryComposite.get_child_group_members(self):
             child.run()

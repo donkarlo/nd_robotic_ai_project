@@ -2,7 +2,7 @@ from nd_datascience.machine_learning.model.application.sequence_to_sequence.kind
     Predicting
 from nd_datascience.machine_learning.model.application.sequence_to_sequence.kind.time_series.kind.transformer.kinds.uncertainty.gaussian.training.training import \
     Training
-from nd_math.probability.distribution.discrepancy.kind.distance.kind.mahalanobis import Mahalanobis
+from nd_math.probability.distribution.discrepancy.kind.distance.kind.mahalanobis.gaussian.gaussian import Mahalanobis
 from nd_math.probability.statistic.population.sampling.kind.countable.finite.members_mentioned.numbered.sequence.sliding_window.generator import \
     Generator as SlidingWindowGenerator
 from nd_math.probability.statistic.population.sampling.kind.countable.finite.members_mentioned.numbered.sequence.sliding_window.sliding_window import \

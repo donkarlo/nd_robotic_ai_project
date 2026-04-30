@@ -8,7 +8,7 @@ from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.p
 from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.thinking.parts.planning.planning import \
     Planning
 from nd_robotic_ai.robot.parts.mind.state.kind.dead.dead import Dead
-from nd_robotic_ai.robot.parts.mind.state.kind.idle.idle import Idle
+from nd_robotic_ai.robot.parts.mind.state.kind.idle.mind_wandering import MindWandering
 from nd_robotic_ai.robot.parts.stimulus.observer.kind.mind_state_change.mind_state_change import MindStateChange
 
 
@@ -29,9 +29,9 @@ class Robot(RobotComposite):
         self.add_child(Body())
         self.add_child(Mind())
 
-    def enlive(self) -> None:
+    def enliven(self) -> None:
         # All goals must be attached to this one so that teh robot decides the priority between them
-        stimulus = MindStateChange(Dead(), Idle())
+        stimulus = MindStateChange(Dead(), MindWandering())
 
         mind_state_receptor = self.find_component_by_name(Receptor)
 

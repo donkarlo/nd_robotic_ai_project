@@ -7,7 +7,7 @@ from nd_robotic_ai.robot.parts.action.feedback.feedback import \
 from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.memory.parts.explicit.parts.long_term.parts.episodic.parts.autobiographic.parts.event_specific_knowledge.kinds.multi_modal.single_modality_forcasting_models_evolving import \
     SingleModalityForcastingModelsEvolving
 from nd_robotic_ai.robot.parts.mind.parts.cognition.parts.object_level.process.parts.perception.trace.trace import Trace
-from nd_robotic_ai.robot.parts.mind.state.kind.idle.idle import Idle as IdleMentalState
+from nd_robotic_ai.robot.parts.mind.state.kind.idle.mind_wandering import MindWandering as IdleMentalState
 from nd_robotic_ai.robot.parts.stimulus.observer.kind.mind_state_change.mind_state_change import MindStateChange
 from nd_robotic_ai.robot.parts.stimulus.observer.kind.mind_state_change.subscriber import \
     Subscriber as MindStateChangeSubscriber
@@ -31,7 +31,7 @@ class Planning(MindStateChangeSubscriber, TraceFormationSubscriber, ABC):
             # build forcasting models, TODO, look esk remeberunbg
             modifying_single_modality_forcasting_model = self.find_component_by_name(
                 SingleModalityForcastingModelsEvolving)
-            modifying_single_modality_forcasting_model.enlive()
+            modifying_single_modality_forcasting_model.enliven()
 
     @override_from(TraceFormationSubscriber, False, False)
     def handle_trace_formation(self, trace: Trace) -> None:

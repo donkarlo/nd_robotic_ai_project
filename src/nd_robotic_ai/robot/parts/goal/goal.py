@@ -1,4 +1,4 @@
-from nd_math.probability.distribution.discrepancy.kind.distance.kind.mahalanobis import Mahalanobis
+from nd_math.probability.distribution.discrepancy.kind.distance.kind.mahalanobis.gaussian.gaussian import Mahalanobis
 
 from nd_robotic_ai.robot.parts.action.composition.composite import \
     Composite as ActionComposite
