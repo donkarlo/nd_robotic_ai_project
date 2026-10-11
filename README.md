@@ -41,10 +41,3 @@ python -m pytest tests
 ~~~
 
 Running the test suite is a development check, **not** evidence that every research subsystem works. The declared robotix console entry points to nd_robotic_ai.__main__:main, but the corresponding __main__.py is empty. Do not rely on that CLI without implementing its target.
-
-## Current limitations
-
-- The active-inference/homeostasis narrative is a research goal and is not an end-to-end verified implementation.
-- A static syntax scan identified four tracked Python modules with syntax errors. Other files include incomplete methods or imports specific to the multi-repository research environment.
-- Package requirements currently declare ruamel.yaml, not every library required by experiments or user interfaces.
-- The root LICENSE file is empty; no licensing terms are implied by this README.
